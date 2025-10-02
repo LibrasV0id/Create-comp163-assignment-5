@@ -1,0 +1,19 @@
+print("=== Challenge 2: Prime Number Checker ===")
+
+testnum = int(input("Enter a number: "))
+is_prime = True
+
+print(f"Testing divisors from 2 to {testnum - 1}...")
+
+for vaule in range(2, testnum - 1):
+    if testnum % vaule == 0:
+        is_prime = False
+        break
+       
+if is_prime and testnum > 1:
+    print(f"{testnum} is prime!")
+else:
+    print(f"{testnum} is not prime (divisible by {vaule})")
+
+
+print("\n=== Challenge 3: Multiplication Table ===")

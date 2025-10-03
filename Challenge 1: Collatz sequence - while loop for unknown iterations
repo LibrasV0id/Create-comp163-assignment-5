@@ -1,19 +1,19 @@
-current_number = int(input())
-step_count = 0
+current_number = input("Give a positive number") #Gets a postive number from the user
+step_count = 0  # Starts and sets the counter to count how many steps it takes for the number from the user to go through the code and become 1
 
 print("=== Challenge 1: Collatz Conjecture ===")
 print("Enter starting number: Sequence:", end=" ")
 
-if current_number != 1:
-    while current_number != 1 :
+if current_number != 1:  #Fixed if one was intered
+    while current_number != 1:  #Loop
         print(current_number, end=" ")
-        if current_number % 2 == 0:
+        if current_number % 2 == 0: #If even it will divide by two
             current_number = current_number // 2
-            if current_number == 1:
+            if current_number == 1:  #Once the user's number gets to one, it will print 1 at the end of the sequence
                 print("1")
-        else:
+        else:  #If odd will multiply user's input by 3 and add 1
             current_number = (current_number * 3) + 1
-        step_count  += 1
+        step_count  += 1  #On the same level as the if/else statements, so each turn updates the number of steps
 else:
-    print(current_number, end=" ")
+    print(current_number, end=" ") #If the number the user gives is 1 or less, it will print the number
 print(f"Steps: {step_count}\n")
